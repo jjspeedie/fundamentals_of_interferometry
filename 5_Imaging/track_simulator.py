@@ -51,7 +51,12 @@ def sim_uv(ref_ra, ref_dec,
         k -= (no_baselines-no_antenna) * new_timestamp
         l += (no_antenna-1) * new_timestamp
         #conversion to local altitude elevation angles:
-        be,bn,bu = enu_coords[antenna_1] - enu_coords[antenna_2]
+        print(antenna_1)
+        print(antenna_2)
+        print(int(antenna_1))
+        print(int(antenna_2))
+
+        be,bn,bu = enu_coords[int(antenna_1)] - enu_coords[int(antenna_2)]
         mag_b = np.sqrt(be**2 + bn**2 + bu**2)
         epsilon = 0.000000000001
         A = np.arctan2(be,(bn + epsilon))

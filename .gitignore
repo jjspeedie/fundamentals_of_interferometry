@@ -1,5 +1,5 @@
 # Data Directory
-data/fits/
+# data/fits/
 data/fundamentals_fits.tar.gz
 data/*.tgz
 data/notes
